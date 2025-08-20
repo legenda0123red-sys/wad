@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(0, 88, 124, .9);
+    margin: 20px;
+    color: #333;
+  }
+  .container {
+    max-width: 700px;
+    background: white;
+    padding: 20px 30px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .highlight {
+    background-color: #0a67c7;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+  }

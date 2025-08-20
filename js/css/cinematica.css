@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: #e6edff;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 88, 124, .9);
+  display: flex;
+  justify-content: center;
+}
+.logos {
+  height: 60px;
+  width: 430px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 35px;
+}
+.genres {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: rgb(210, 214, 223);
+}
+.menu {
+  width: 1024px;
+  display: flex;
+  justify-content: start;
+}
+.shadow {
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0));
+  height: 8px;
+}
+
+.swiper {
+  width: 1200px;
+  height: 576px;
+  margin-top: 242px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.backgg {
+  position: relative
+}
+.backgg1 {
+  position: absolute;
+  position: sticky;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  background-color: white;
+  width: 1200px; 
+  padding: 25px;
+  height: auto;
+}
+
+.img_film {
+  width: 181px;
+  height: 244px;
+  border-radius: 5px 5px 0 0;
+}
+.title_film {
+  background-color: #02558B;
+  color: white;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card_title {
+  width: 255px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  
+}
+ .card_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; 
+}
+
+.card_title {
+  width: 226px;
+  height: 369px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.img_film {
+  width: 189px;
+  height: 500px; 
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.title_film {
+  background-color: #02558B;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card_title {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_title:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.vacancy-link {
+  display: block;
+  text-align: center;
+  margin: 40px auto 0 auto;
+  font-size: 16px;
+  color: #02558B;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.vacancy-link:hover {
+  text-decoration: underline;
+}
+.phone-link{
+   display: block;
+  text-align: center;
+  margin: 40px auto 0 auto;
+  font-size: 16px;
+  color: #02558B;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+.phone-link:hover{
+  text-decoration: underline;
+}
+.links-row {
+  display: flex;                /* Ссылки в ряд */
+  justify-content: center;      /* Выравнивание по центру */
+  gap: 20px;                   /* Расстояние между ссылками */
+  padding: 10px 0;             /* Отступы сверху и снизу */
+  background-color: #1f4a82;    /* Темно-синий фон (можно изменить) */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.links-row a {
+  color: white;                /* Белый цвет ссылок */
+  text-decoration: none;       /* Без подчеркивания */
+  padding: 5px 10px;
+  border-radius: 4px;          /* Немного скругленных углов */
+  transition: background-color 0.3s ease;
+}
+
+.links-row a:hover {
+  background-color: #16416b;   /* Темнее фон при наведении */
+  text-decoration: underline;
+  cursor: pointer;
+}

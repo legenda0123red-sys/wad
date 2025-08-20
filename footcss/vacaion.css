@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 88, 124, .9); 
+  color: #333;
+  padding: 50px 0;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.job-box {
+  background-color: white;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.job-box h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #02558B;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-box h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #02558B;
+}
+
+.job-box ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.job-box li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

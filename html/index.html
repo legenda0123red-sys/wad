@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematica</title>
+    <link rel="stylesheet" href="../js/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="form">
+        <h1>Форма регистрации</h1>
+         <form id="formApp">
+            <div class="email">
+        <input type="Email" id="email" placeholder="Email" required> 
+        <i class='bxr  ' style='color:black'  ></i> 
+            </div>
+            <div class="password">
+        <input type="Password" id="password" placeholder="Password" required>
+      <i class='bxr '  style='color:black'></i> 
+        </div>
+        <div class="firstname">
+        <input type="text" id="firstName" placeholder="FirstName" required>
+        <i class='bxr '  style='color:black'></i> 
+        </div>
+        <div class="Lastname">
+        <input type="text" id="lastName" placeholder="LastName" required>
+        <i class='bxr  '  style='color:black'></i> 
+        </div>
+        <button>Зарегистрироваться</button>
+        <p>У вас есть аккаунт?<a href="./login.html">Войти</a></p>
+         </form>
+          <p id="message" class="message"></p>
+    </div>
+
+    <script src="/js/registration.js"></script>
+</body>
+</html>
