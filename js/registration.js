@@ -1,12 +1,13 @@
-const form = document.getElementById("formApp");
+const form = document.getElementById("registrationForm"); // исправлено
 const message = document.getElementById("message");
 
-// Вынесенные функции
-function showMessage(text, color) {
+// Показывает сообщение пользователю
+function showMessage(text, color = "red") {
     message.textContent = text;
     message.style.color = color;
 }
 
+// Проверка корректности email
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -20,23 +21,31 @@ form.addEventListener("submit", (e) => {
     const email = document.getElementById("email").value.trim().toLowerCase();
     const password = document.getElementById("password").value;
 
+    // Проверка заполненности всех полей
     if (!firstName || !lastName || !email || !password) {
-        return showMessage("Заполнить все поля", "red");
+        return showMessage("Заполните все поля");
     }
 
+    // Проверка длины пароля
     if (password.length < 6) {
-        return showMessage("Пароль слишком маленький", "red");
+        return showMessage("Пароль должен содержать минимум 6 символов");
     }
 
+    // Проверка email
     if (!validateEmail(email)) {
-        return showMessage("Введите корректный имейл", "red");
+        return showMessage("Введите корректный email");
     }
 
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-    if (users.some(user => user.email === email)) {
-        return showMessage("Email уже зарегистрирован", "red");
+    // Получение пользователей из localStorage
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Проверка уникальности email
+    const emailExists = users.some(user => user.email === email);
+    if (emailExists) {
+        return showMessage("Email уже зарегистрирован");
     }
 
+    // Создание нового пользователя
     const newUser = {
         id: Date.now(),
         firstName,
@@ -45,14 +54,14 @@ form.addEventListener("submit", (e) => {
         password
     };
 
+    // Сохраняем пользователя
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
     form.reset();
-
     showMessage("Регистрация прошла успешно. Перенаправление...", "green");
 
     setTimeout(() => {
-        window.location.href = 'login.html';
+        window.location.href = "login.html";
     }, 1500);
 });

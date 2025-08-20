@@ -1,6 +1,15 @@
 const loginForm = document.getElementById("loginForm");
 const loginMessage = document.getElementById("loginMessage");
 
+function showMessage(text, color = "red") {
+    loginMessage.textContent = text;
+    loginMessage.style.color = color;
+}
+
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -8,15 +17,15 @@ loginForm.addEventListener("submit", (e) => {
     const password = loginForm.querySelector('input[type="password"]').value;
 
     if (!email || !password) {
-        return showMessage("БЫСТРО ЗАПОЛНИЛ ВСЕ ПОЛЯ ДУРАЧОК!", "red");
+        return showMessage("Пожалуйста, заполните все поля.");
     }
 
     if (!validateEmail(email)) {
-        return showMessage("Введите корректный имейл", "red");
+        return showMessage("Введите корректный email.");
     }
 
     if (password.length < 6) {
-        return showMessage("Пароль должен быть минимум 6 символов", "red");
+        return showMessage("Пароль должен содержать минимум 6 символов.");
     }
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -25,31 +34,20 @@ loginForm.addEventListener("submit", (e) => {
     );
 
     if (!user) {
-        return showMessage("Неверный пароль или имейл", "red");
+        return showMessage("Неверный email или пароль.");
     }
 
-    localStorage.setItem(
-        "currentUser",
-        JSON.stringify({
-            id: user.id,
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-        })
-    );
+    // Всё в порядке — сохраняем текущего пользователя
+    localStorage.setItem("currentUser", JSON.stringify({
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+    }));
 
-    showMessage("Вход выполнен успешно", "green");
+    showMessage("Вход выполнен успешно!", "green");
 
     setTimeout(() => {
         window.location.href = "cinematica.html";
     }, 2000);
 });
-
-function showMessage(text, color) {
-    loginMessage.textContent = text;
-    loginMessage.style.color = color;
-}
-
-function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
