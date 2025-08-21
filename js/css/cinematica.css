@@ -29,15 +29,35 @@ header {
   margin-right: 35px;
 }
 .genres {
-  width: 300px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  color: rgb(210, 214, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0099cc; 
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
 }
+
+.genres h3 {
+    margin: 0 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.genres h3:hover {
+    color: #ffd700;
+}
+
+.genres h3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.genres h3 a:hover {
+    color: #ffd700;
+}
+
 .menu {
   width: 1024px;
   display: flex;
@@ -187,25 +207,25 @@ header {
   text-decoration: underline;
 }
 .links-row {
-  display: flex;                /* Ссылки в ряд */
-  justify-content: center;      /* Выравнивание по центру */
-  gap: 20px;                   /* Расстояние между ссылками */
-  padding: 10px 0;             /* Отступы сверху и снизу */
-  background-color: #1f4a82;    /* Темно-синий фон (можно изменить) */
+  display: flex;                
+  justify-content: center;      
+  gap: 20px;                   
+  padding: 10px 0;             
+  background-color: #1f4a82;    
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
 
 .links-row a {
-  color: white;                /* Белый цвет ссылок */
-  text-decoration: none;       /* Без подчеркивания */
+  color: white;               
+  text-decoration: none;       
   padding: 5px 10px;
-  border-radius: 4px;          /* Немного скругленных углов */
+  border-radius: 4px;          
   transition: background-color 0.3s ease;
 }
 
 .links-row a:hover {
-  background-color: #16416b;   /* Темнее фон при наведении */
+  background-color: #16416b;   
   text-decoration: underline;
   cursor: pointer;
 }

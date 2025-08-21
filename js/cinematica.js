@@ -20,11 +20,10 @@ cardClicks.forEach(card => {
     const img = card.querySelector('.img_film').src;
     const title = card.querySelector('.title_film h3').textContent;
 
-    // Сохраняем в localStorage
+  
     localStorage.setItem('cardImg', img);
     localStorage.setItem('cardTitle', title);
 
-    // Переход на about.html
     window.location.href = "about.html";
   });
 });

@@ -37,7 +37,7 @@ loginForm.addEventListener("submit", (e) => {
         return showMessage("Неверный email или пароль.");
     }
 
-    // Всё в порядке — сохраняем текущего пользователя
+    
     localStorage.setItem("currentUser", JSON.stringify({
         id: user.id,
         firstName: user.firstName,
@@ -49,5 +49,5 @@ loginForm.addEventListener("submit", (e) => {
 
     setTimeout(() => {
         window.location.href = "cinematica.html";
-    }, 2000);
+    }, 1500);
 });
